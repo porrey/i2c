@@ -135,15 +135,15 @@ void receiveEvent(uint8_t byteCount)
 
   // ***
   // *** We are expecting 2 bytes from the master. The first byte is the command.
-  // *** the second byte is the parameter.
+  // *** the second byte is the command parameter.
   // ***
   // *** Commands:
   // ***
-  // *** 1 => Lock/unlock the data. The parameter is either 0 to unlock or 1 to lock.
-  // *** 2 => Returns the size of a block. No Parameter (set parameter = 0).
-  // *** 3 => Returns the number of blocks in the buffer. No parameter (set parameter = 0).
-  // *** 4 => Returns the size in bytes of the JSON string. No parameter (set parameter = 0).
-  // *** 5 => Read the nth block from the buffer where the parameter is n and n starts at 1.
+  // *** 1 => Lock/unlock the data. The command parameter is either 0 to unlock or 1 to lock.
+  // *** 2 => Returns the size of a block. No command parameter (set parameter = 0).
+  // *** 3 => Returns the number of blocks in the buffer. No command parameter (set parameter = 0).
+  // *** 4 => Returns the size in bytes of the JSON string. No command parameter (set parameter = 0).
+  // *** 5 => Read the nth block from the buffer where the command parameter is n and n starts at 1.
   // ***
   if (byteCount == 2)
   {
